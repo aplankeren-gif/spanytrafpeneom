@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🟢Live - contact me 🌹💋</title>
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="🟢Live - contact me 🌹💋">
+    <meta property="og:description" content="Haz clic para conectar conmigo directamente.">
+    <meta property="og:image" content="https://balanenantek.pages.dev/giphy.gif">
+    <meta property="og:type" content="website">
+
+    <!-- Icon FontAwesome untuk Logo Platform -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 12px;
+        }
+        .main-card {
+            background: #1f2833;
+            border: 1px solid #333;
+            border-radius: 20px;
+            max-width: 420px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+        .media-container {
+            width: 100%;
+            max-height: 350px;
+            overflow: hidden;
+            position: relative;
+            background-color: #000;
+        }
+        .media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+        .live-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 0, 79, 0.85);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: pulse-live 1s infinite;
+        }
+        .content-area {
+            padding: 16px 14px;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #45f3ff;
+        }
+        
+        /* Grid 4 Icon Platform */
+        .platform-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .platform-btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .platform-btn:hover {
+            transform: translateY(-2px);
+        }
+        .platform-icon {
+            font-size: 26px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .platform-info {
+            text-align: left;
+            margin-left: 10px;
+            flex-grow: 1;
+        }
+        .platform-name {
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+        }
+        .platform-desc {
+            font-size: 11px;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        /* Warna Khusus Brand */
+        .wa-btn { background: linear-gradient(135deg, #128c7e, #25d366); }
+        .tg-btn { background: linear-gradient(135deg, #0088cc, #34ace0); }
+        .tinder-btn { background: linear-gradient(135deg, #fd267d, #ff6036); }
+        .tiktok-btn { background: linear-gradient(135deg, #000000, #25f4ee); }
+
+        .btn-main-cta {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 12px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse-live {
+            0% { opacity: 1; }
+            50% { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <div class="media-container" onclick="goSmartlink()">
+            <div class="live-tag">
+                <span class="live-dot"></span> LIVE NOW
+            </div>
+            <img src="https://balanenantek.pages.dev/giphy.gif" alt="Live Preview">
+        </div>
+
+        <div class="content-area">
+            <h2 id="main-title">Conecta conmigo en mi canal privado 🔥</h2>
+            
+            <div class="platform-grid">
+                <!-- WhatsApp -->
+                <div onclick="goSmartlink()" class="platform-btn wa-btn">
+                    <div class="platform-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="platform-info">
+                        <div class="platform-name">WhatsApp <span style="font-size:10px;">🟢 Online</span></div>
+                        <div class="platform-desc" id="wa-desc">Chat directo y fotos privadas sin censura</div>
+                    </div>
+                </div>
+
+                <!-- Telegram -->
+                <div onclick="goSmartlink()" class="platform-btn tg-btn">
+                    <div class="platform-icon"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="platform-info">
+                        <div class="platform-name">Telegram <span style="font-size:10px;">VIP Group</span></div>
+                        <div class="platform-desc" id="tg-desc">Acceso a mi grupo privado exclusivo de videos</div>
+                    </div>
+                </div>
+
+                <!-- Tinder -->
+                <div onclick="goSmartlink()" class="platform-btn tinder-btn">
+                    <div class="platform-icon"><i class="fas fa-fire"></i></div>
+                    <div class="platform-info">
+                        <div class="platform-name">Tinder Direct <span style="font-size:10px;">1.2 km</span></div>
+                        <div class="platform-desc" id="tinder-desc">Match instantáneo para cita hoy mismo</div>
+                    </div>
+                </div>
+
+                <!-- TikTok -->
+                <div onclick="goSmartlink()" class="platform-btn tiktok-btn">
+                    <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
+                    <div class="platform-info">
+                        <div class="platform-name">TikTok Private <span style="font-size:10px;">Live</span></div>
+                        <div class="platform-desc" id="tiktok-desc">Transmisión en vivo privada de 18+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main CTA Button -->
+            <a href="javascript:void(0)" onclick="goSmartlink()" class="btn-main-cta" id="main-cta">
+                💋 Entrar Al Perfil Privado (Gratis)
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // MASUKKAN SMARTLINK TRAFEE ANDA DI SINI
+        const TRAFEE_SMARTLINK = "https://chfhbei.tepixs.com/s/7a96a663ee35e?track=Iphone&subsource=Iphone&ext_click_id=Iphone";
+
+        // Teks Penerjemah Otomatis Berdasarkan Bahasa User Browser
+        const translations = {
+            es: {
+                title: "Conecta conmigo en mi canal privado 🔥",
+                wa: "Chat directo y fotos privadas sin censura",
+                tg: "Acceso a mi grupo privado exclusivo de videos",
+                tinder: "Match instantáneo para cita hoy mismo",
+                tiktok: "Transmisión en vivo privada de 18+",
+                cta: "💋 Entrar Al Perfil Privado (Gratis)"
+            },
+            pt: {
+                title: "Conecte-se comigo no meu canal privado 🔥",
+                wa: "Chat direto e fotos privadas sem censura",
+                tg: "Acesso ao meu grupo privado exclusivo de vídeos",
+                tinder: "Match instantâneo para encontro hoje mesmo",
+                tiktok: "Transmissão ao vivo privada para 18+",
+                cta: "💋 Entrar No Perfil Privado (Grátis)"
+            },
+            en: {
+                title: "Connect with me on my private channel 🔥",
+                wa: "Direct chat and uncensored private photos",
+                tg: "Access to my exclusive private video group",
+                tinder: "Instant match for a date today",
+                tiktok: "Private 18+ live stream right now",
+                cta: "💋 Enter Private Profile (Free)"
+            }
+        };
+
+        // Deteksi Bahasa Pengunjung
+        const userLang = navigator.language || navigator.userLanguage;
+        let langCode = "en"; // Default Bahasa Inggris
+
+        if (userLang.startsWith("es")) {
+            langCode = "es";
+        } else if (userLang.startsWith("pt")) {
+            langCode = "pt";
+        }
+
+        // Terapkan Bahasa ke Element HTML
+        document.getElementById("main-title").innerText = translations[langCode].title;
+        document.getElementById("wa-desc").innerText = translations[langCode].wa;
+        document.getElementById("tg-desc").innerText = translations[langCode].tg;
+        document.getElementById("tinder-desc").innerText = translations[langCode].tinder;
+        document.getElementById("tiktok-desc").innerText = translations[langCode].tiktok;
+        document.getElementById("main-cta").innerText = translations[langCode].cta;
+
+        function goSmartlink() {
+            window.location.href = TRAFEE_SMARTLINK;
+        }
+
+        // AUTO REDIRECT SETELAH 1 MENIT (60.000 ms)
+        setTimeout(function() {
+            goSmartlink();
+        }, 60000);
+    </script>
+</body>
+</html>
